@@ -1,3 +1,10 @@
 
-<h1> lists of all movies </h1>
-<h1><%= @list.name %></h1>
+<h1>Lists of movies</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li> <%= link_to list.name, list_path(list) %> </li>
+  <% end %>
+</ul>
+
+<%# <%= link_to "Add a new movie list", new_list_path %>
